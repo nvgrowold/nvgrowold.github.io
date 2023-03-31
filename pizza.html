@@ -1,0 +1,243 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/ec308a8989.js" crossorigin="anonymous"></script>
+
+    <!--jQuery CDN link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+     <!--link external css styling file-->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Pizza</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header" id="myHeader">
+            <img class="logo" src="assets/img/My project.png" alt="Sparkle Pizza Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pizza.html">Pizza</a></li>
+                    <li><a href="sides.html">Sides</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="dessert.html">Desserts</a></li>
+                    <li><a href="drink.html">Drinks</a></li> 
+                </ul>         
+            </nav>
+            <a class="login" id="user-name" href="login.html">Login/Sign Up</a>      
+            <div class="welcomePart">
+                <div id="welcome">Welcome, user</div>
+                <div id="userName"></div>
+                <br>
+                <a class="logout" id="logout" type="button" href="login.html" onclick="logoutClicked()">Logout</a>
+            </div>
+            <a href="cart.html">
+                <div class="cart">
+                    <img src="assets/img/shopping-cart.png" alt="cart"></a>
+                    <div class="badge itemNumber" id="count-cart">0</div>
+                </div>
+            </a>
+            <img src="assets/img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
+        </header>
+    </div>
+    
+    <h2>~ Pizza ~</h2>
+
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/Picture7.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Pepperoni</h4>
+                        <hr>
+                        <p class="productDetail">Pepper Pepperoni, Salami, Ham, Bacon and Chorizo. Optional BBQ, Sweet Chilli, Smokey BBQ, Tomato... Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size1" onchange="productPrice1()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$18</h4>
+                            <a class="add-to-cart" id="item1" href ="#" data-name="Pepperoni" data-price="18.66"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/Lust.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Prosciutto</h4>
+                        <hr>
+                        <p class="productDetail">Double Ham, Double Pineapple and Double Cheese. Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size2" onchange="productPrice2()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price2">$22</h4>
+                            <a class="add-to-cart" id="item2" href ="#" data-name="Prosciutto" data-price="22.66"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/Picture3.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Alla Capricciosa</h4>
+                        <hr>
+                        <p class="productDetail">Salami, Ham, Onions, Mushrooms, Pineapple and Bacon. Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size3" onchange="productPrice3()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price3">$18</h4>
+                            <a class="add-to-cart" id="item3" href ="#" data-name="Alla Capricciosa" data-price="26" id="cart-price"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/Picture4.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Napoletana</h4>
+                        <hr>
+                        <p class="productDetail">Pepper Pepperoni, Onion, Capsicum, Tomatoes, Chilli. Optional Kalamata Olives, Jalapeno Peppers and Anchovies. Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size4" onchange="productPrice4()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price4">$22</h4>
+                            <a class="add-to-cart" id="item4" href ="#" data-name="Napoletana" data-price="20.66"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/Picture5.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Gluttony</h4>
+                        <hr>
+                        <p class="productDetail">Onion, Garlic, Salami, Ham, Mushroom, Pineapple, Capsicum, Tomato, Bacon, Black Pepper. Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size5" onchange="productPrice5()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price5">$18</h4>
+                            <a class="add-to-cart" id="item5" href ="#" data-name="Gluttony" data-price="22.99"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/Picture6.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Pride</h4>
+                        <hr>
+                        <p class="productDetail">Mushrooms, Capsicum, Tomatoes, Pineapple and Onions. Optional: Kalamata Olives, Garlic, Jalapeno Peppers.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size6" onchange="productPrice6()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price6">$22</h4>
+                            <a class="add-to-cart" id="item6" href ="#" data-name="Pride" data-price="22"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+
+    <hr class="line">
+    <div class="footer">       
+        <div class="feedback">
+            <h5>Feedback</h5>
+            <p>Help us improve our service</p>
+            <a href="#">Send Feedback</a>
+        </div>
+        <div class="media">
+            <h5>Follow Us</h5>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div> 
+    <div class="copyright">
+        <hr class="line0">
+        Copyright <i class="fa-regular fa-copyright"></i> Sparkle Pizza NZ All Right Reserved.
+    </div>
+    
+    <script src="assets/js/JavaScript.js"></script>
+    <script src="assets/js/pizzaSize.js"></script>
+    <script src="assets/js/login.js"></script> 
+    
+</body>
+</html>

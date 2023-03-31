@@ -1,0 +1,128 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/ec308a8989.js" crossorigin="anonymous"></script>
+
+    <!--jQuery CDN link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- jQuery library for validation -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+   
+    <!--link external css styling file-->
+    <link rel="stylesheet" href="assets/css/cart.css">
+
+    <style>
+        .error{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header" id="myHeader">
+            <img class="logo" src="assets/img/My project.png" alt="Sparkle Pizza Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pizza.html">Pizza</a></li>
+                    <li><a href="sides.html">Sides</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="dessert.html">Desserts</a></li>
+                    <li><a href="drink.html">Drinks</a></li> 
+                </ul>         
+            </nav> 
+            <a class="login" id="user-name" href="login.html">Login/Sign Up</a>     
+            <div class="welcomePart">
+                <div id="welcome">Welcome, user</div>
+                <div id="userName"></div>
+                <br>
+                <a class="logout" id="logout" type="button" href="login.html" onclick="logoutClicked()">Logout</a>
+            </div>
+            
+            <a href="cart.html">
+                <div class="cart">
+                    <img src="assets/img/shopping-cart.png" alt="cart"></a>
+                    <div class="badge itemNumber" id="count-cart">0</div>
+                </div>
+            </a>
+            <img src="assets/img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
+        </header>
+    </div>
+
+    <main>
+        <h2>~ Cart ~</h2>
+
+        <div class="address-cart">
+                <!--delivery address-->
+                <form id="form2">
+                    <div class="card">
+                        <label>First Name *</label><br>
+                        <input type="text" id="fName" name="fName" placeholder="John"><br><br>
+                        <label>Last Name *</label><br>
+                        <input type="text" id="LName" name="LName" placeholder="Smith"><br><br>
+                        <label>Email *</label><br>
+                        <input type="text" id="email" name="email" placeholder="example@gmail.com"><br><br>
+                        <label>Delivery Address *</label><br>
+                        <input type="text" id="address" name="address" placeholder="350 Example Street, CBD, Auckland, NZ"><br><br>
+                        <div class="prefix">
+                            <label>Prefix</label><br>
+                            <input type="text" id="prefix">
+                        </div>
+                        <div class="number">
+                            <label>Mobile Number *</label><br>
+                            <input type="text" id="mobileNumber" name="mobileNumber">
+                        </div><br><br>
+                        <label>Join Sparkle Lovers</label><br>
+                        <input type="checkbox" id="checkbox">
+                        <label class="joinContact">Send me email & SMS updates about exclusive deals and promos.</label>
+                        <br><br>
+                        <button type="submit" value="Save" id="addressSaved" onclick="save()">Save</button> <!--pop up alert-->
+                        <p id="msg"></p>
+                        <br>
+                    </div>
+                </form>
+
+                <!--cart content-->           
+                <form>
+                    <div class="card">                        
+                        <a name="cartSection"></a>
+                        <div class="cart-row">
+                            <div class="cart-item-name cart-header cart-column">Item</div>
+                            <div class="cart-price-header cart-header cart-column">Price</div>
+                            <div class="cart-quantity cart-header cart-column">Quantity</div>
+                            <div class="cart-quantity cart-header cart-column">Sub-total</div>
+                        </div>
+                        <div class="cart-items">
+                            <ul id="show-cart">
+                                <span-cart>Your cart is empty!</span-cart>
+                            </ul>
+                        </div>
+                    
+                        <div class="cart-total">Total Cart:$<span id="total-cart"></span></div><br><br>
+                        <button id="clear-cart">Clear Cart</button><br><br><br>    
+                        <button type="button" value="Check Out" id="checkOut" onclick="purchase()">Check Out</button>
+                                       
+                    </div>
+                </form>
+        </div> 
+    </main>
+    
+    
+    <div class="copyright">
+        <hr class="line0"><br>
+        Copyright <i class="fa-regular fa-copyright"></i> Sparkle Pizza NZ All Right Reserved.
+    </div>
+  
+    <script src="assets/js/JavaScript.js"></script> 
+    <script src="assets/js/jqueryValidation.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/login.js"></script>    
+</body>
+</html>

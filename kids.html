@@ -1,0 +1,152 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/ec308a8989.js" crossorigin="anonymous"></script>
+
+    <!--jQuery CDN link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+     <!--link external css styling file-->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Kids</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header" id="myHeader">
+            <img class="logo" src="assets/img/My project.png" alt="Sparkle Pizza Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pizza.html">Pizza</a></li>
+                    <li><a href="sides.html">Sides</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="dessert.html">Desserts</a></li>
+                    <li><a href="drink.html">Drinks</a></li> 
+                </ul>         
+            </nav>
+            <a class="login" id="user-name" href="login.html">Login/Sign Up</a>      
+            <div class="welcomePart">
+                <div id="welcome">Welcome, user</div>
+                <div id="userName"></div>
+                <br>
+                <a class="logout" id="logout" type="button" href="login.html" onclick="logoutClicked()">Logout</a>
+            </div>
+            <a href="cart.html">
+                <div class="cart">
+                    <img src="assets/img/shopping-cart.png" alt="cart"></a>
+                    <div class="badge itemNumber" id="count-cart">0</div>
+                </div>
+            </a>
+            <img src="assets/img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
+        </header>
+    </div>
+    
+    <h2>~ Kids ~</h2>
+
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/kidsPizza.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Kids Pizza</h4>
+                        <hr>
+                        <p class="productDetail">Tomato Base Sauce, 100% Mozzarella Cheese and 1 Topping.</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$15</h4>
+                            <a class="add-to-cart" href ="#" data-name="Kids Pizza" data-price="15"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/kidsLasagne.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Lasagne</h4>
+                        <hr>
+                        <p class="productDetail">This pepperoni pizza is a classic delicious homemade style pizza with crust and tomato sauce.</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$16</h4>
+                            <a class="add-to-cart" href ="#" data-name="Lasagne" data-price="16"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/kidsAppleDrink.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Kids Keri Apple</h4>
+                        <hr>
+                        <p class="productDetail">Available in 250ml</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$4</h4>
+                            <a class="add-to-cart" href ="#" data-name="Kids Keri Apple" data-price="4"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/kidsDrink2.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Kids Keri Apple & Blackcurrant</h4>
+                        <hr>
+                        <p class="productDetail">Available in 250ml</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$4</h4>
+                            <a class="add-to-cart" href ="#" data-name="Kids Keri Apple & Blackcurrant" data-price="4"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+
+    <hr class="line">
+    <div class="footer">       
+        <div class="feedback">
+            <h5>Feedback</h5>
+            <p>Help us improve our service</p>
+            <a href="#">Send Feedback</a>
+        </div>
+        <div class="media">
+            <h5>Follow Us</h5>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div> 
+    <div class="copyright">
+        <hr class="line0">
+        Copyright <i class="fa-regular fa-copyright"></i> Sparkle Pizza NZ All Right Reserved.
+    </div>
+
+    <script src="assets/js/JavaScript.js"></script>
+    <script src="assets/js/pizzaSize.js"></script>
+    <script src="assets/js/login.js"></script> 
+    
+</body>
+</html>

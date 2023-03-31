@@ -1,0 +1,78 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/ec308a8989.js" crossorigin="anonymous"></script>
+
+    <!--jQuery CDN link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!--link external css styling file-->
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <title>Welcome to Sparkle Pizza</title>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="assets/img/production ID_4457933 (1).mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <header class="header" id="myHeader">
+            <img class="logo" src="assets/img/My project.png" alt="Sparkle Pizza Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pizza.html">Pizza</a></li>
+                    <li><a href="sides.html">Sides</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="dessert.html">Desserts</a></li>
+                    <li><a href="drink.html">Drinks</a></li> 
+                </ul>         
+            </nav>
+            <a class="login" id="user-name" href="login.html">Login/Sign Up</a>      
+            <div class="welcomePart">
+                <div id="welcome">Welcome, user</div>
+                <div id="userName"></div>
+                <br>
+                <a class="logout" id="logout" type="button" href="login.html" onclick="logoutClicked()">Logout</a>
+            </div>
+            
+            <img src="assets/img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
+        </header>
+    </div>
+
+    <div class="aboutUs">
+        <h4>Welcome to Sparkle Pizza, your go-to destination for delicious, handmade pizzas made with the finest ingredients and baked in traditional ovens.</h4>
+
+        <p> At Sparkle Pizza, we believe that nothing beats the taste of a freshly baked pizza, made with love and care. Our team of expert chefs are passionate about creating the perfect pizza for our customers, using only the freshest ingredients and time-honored baking techniques.
+            
+            We take great pride in the quality of our ingredients, sourcing the best cheeses, meats, and vegetables to create mouth-watering pizzas that are bursting with flavor. Whether you're a fan of classic toppings like pepperoni and mushrooms or prefer something more exotic like artichoke hearts and prosciutto, we've got you covered.
+        </p>    
+        <p>
+            What sets Sparkle Pizza apart is our commitment to handmade features. Each pizza is carefully crafted by our chefs, who take the time to knead the dough by hand and shape it into the perfect crust. We don't rely on machines or pre-made doughs, ensuring that each pizza we make is unique and bursting with flavor.
+            
+            And, of course, we can't forget about our traditional ovens. Our pizzas are baked to perfection in brick ovens that have been used for generations, ensuring that every bite is full of authentic, old-world flavor.
+        </p>
+            
+        <p>
+            At Sparkle Pizza, we understand that you don't always have time to visit us in person. That's why we offer online delivery, so you can enjoy our handmade pizzas from the comfort of your own home. We take great care in packaging and delivering our pizzas to ensure that they arrive hot, fresh, and delicious.
+            
+            We are committed to providing our customers with the best possible pizza experience, whether you dine in, take out, or order online. Thank you for choosing Sparkle Pizza, and we can't wait to make your next pizza!
+        </p>    
+    </div>
+    
+    <div class="copyright">
+        
+        Copyright <i class="fa-regular fa-copyright"></i> Sparkle Pizza NZ All Right Reserved.
+    </div>
+
+
+    <script src="assets/js/JavaScript.js"></script>
+    <script src="assets/js/login.js"></script>
+    
+</body>
+</html>

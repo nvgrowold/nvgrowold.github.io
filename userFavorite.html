@@ -1,0 +1,203 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--font awsome-->
+    <script src="https://kit.fontawesome.com/ec308a8989.js" crossorigin="anonymous"></script>
+
+    <!--jQuery CDN link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+     <!--link external css styling file-->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Your Favorite</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header" id="myHeader">
+            <img class="logo" src="assets/img/My project.png" alt="Sparkle Pizza Logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pizza.html">Pizza</a></li>
+                    <li><a href="sides.html">Sides</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="dessert.html">Desserts</a></li>
+                    <li><a href="drink.html">Drinks</a></li> 
+                </ul>         
+            </nav>
+            <a class="login" id="user-name" href="login.html">Login/Sign Up</a>      
+            <div class="welcomePart">
+                <div id="welcome">Welcome, user</div>
+                <div id="userName"></div>
+                <br>
+                <a class="logout" id="logout" type="button" href="login.html" onclick="logoutClicked()">Logout</a>
+            </div>
+            <a href="cart.html">
+                <div class="cart">
+                    <img src="assets/img/shopping-cart.png" alt="cart"></a>
+                    <div class="badge itemNumber" id="count-cart">0</div>
+                </div>
+            </a>
+            <img src="assets/img/menu-icon.png" class="menu-icon" onclick="togglemenu()">
+        </header>
+    </div>
+    
+    <h2>~ Your Favorite ~</h2>
+
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/Picture7.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Pepperoni</h4>
+                        <hr>
+                        <p class="productDetail">Pepper Pepperoni, Salami, Ham, Bacon and Chorizo. Optional BBQ, Sweet Chilli, Smokey BBQ, Tomato... Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size1" onchange="productPrice1()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$18</h4>
+                            <a class="add-to-cart" id="item1" href ="#" data-name="Pepperoni" data-price="18.66"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/Lust.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Prosciutto</h4>
+                        <hr>
+                        <p class="productDetail">Double Ham, Double Pineapple and Double Cheese. Made with 100% free range ingredients.</p>
+                        <p class="dropdown">
+                            <label for="size">Size</label>
+                            <select class="size" id="size2" onchange="productPrice2()">                       
+                                <option value="Standard">Standard</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="ExtraLarge">Extra Large</option>
+                            </select>                   
+                        </p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price2">$22</h4>
+                            <a class="add-to-cart" id="item2" href ="#" data-name="Prosciutto" data-price="22.66"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/ChickenTender.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Free Range Chicken Tenders</h4>
+                        <hr>
+                        <p class="productDetail">6 Crumbed and deep fried Chicken Tenders, served with your choice of dip.</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$10</h4>
+                            <a class="add-to-cart" href ="#" data-name="Free Range Chicken Tenders" data-price="10"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/Platter1.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Splatter Fest Platter I</h4>
+                        <hr>
+                        <p class="productDetail">Free Range Chicken Tenders, Corn Nuggets, Cajun Wedges, Free Range Chicken Wings lashed with Cola BBQ Sauce & a selection of sauces.</p>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$31</h4>
+                            <a class="add-to-cart" href ="#" data-name="Splatter Fest Platter I" data-price="31"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>              
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <form>
+                <div class="card">
+                    <img class="add-to-cart" src="assets/img/mintIceCream.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Mint Choc Bikkie</h4>
+                        <hr>
+                        <p class="productDetail">Silky mint ice cream with crumbly chunks of gluten-free chocolate biscuits. 140ml (2 serves). Plant-based.</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$6.5</h4>
+                            <a class="add-to-cart" href ="#" data-name="Mint Choc Bikkie" data-price="6.5"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="assets/img/kidsDrink2.png" alt="#">
+                    <div class="productInformation">
+                        <h4>Kids Keri Apple & Blackcurrant</h4>
+                        <hr>
+                        <p class="productDetail">Available in 250ml</p>
+                        <br><br>
+                        <div class="priceCart">
+                            <h4 class="product-price" id="product-price1">$4</h4>
+                            <a class="add-to-cart" href ="#" data-name="Kids Keri Apple & Blackcurrant" data-price="4"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+
+        </div>
+ 
+    </div>
+
+    <hr class="line">
+    <div class="footer">       
+        <div class="feedback">
+            <h5>Feedback</h5>
+            <p>Help us improve our service</p>
+            <a href="#">Send Feedback</a>
+        </div>
+        <div class="media">
+            <h5>Follow Us</h5>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div> 
+    <div class="copyright">
+        <hr class="line0">
+        Copyright <i class="fa-regular fa-copyright"></i> Sparkle Pizza NZ All Right Reserved.
+    </div>
+    
+    <script src="assets/js/JavaScript.js"></script>
+    <script src="assets/js/pizzaSize.js"></script>
+    <script src="assets/js/login.js"></script> 
+    
+</body>
+</html>
